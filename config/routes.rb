@@ -1,5 +1,8 @@
 FirstApp::Application.routes.draw do
-  resources :posts
+  namespace :admin do
+    resources :posts
+  end
+  get 'about', to: 'pages#about', as: 'about'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -49,7 +52,7 @@ FirstApp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'home#index'
+  root :to => 'pages#index'
 
   # See how all your routes lay out with "rake routes"
 
