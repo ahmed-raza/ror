@@ -1,6 +1,14 @@
 <h1>Edit Post</h1>
 
 <%= form_for @post do |f| %>
+  <% if @post.errors.any? %>
+    <strong>Errors:</strong>
+    <ul>
+      <% @post.errors.full_messages.each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+  <% end %>
   <p><%= f.label :title %></p>
   <p><%= f.text_field :title %></p>
   <p><%= f.label :content %></p>

@@ -1,0 +1,12 @@
+Thu, 05 May 2016 09:35:15 +0500
+doc/README_FOR_APP	Mon, 02 May 2016 15:44:36 +0500
+app/controllers/application_controller.rb	Mon, 02 May 2016 15:44:36 +0500
+app/controllers/pages_controller.rb	Tue, 03 May 2016 14:36:51 +0500
+app/controllers/posts_controller.rb	Tue, 03 May 2016 17:28:41 +0500
+app/controllers/search_controller.rb	Wed, 04 May 2016 12:27:21 +0500
+app/helpers/application_helper.rb	Mon, 02 May 2016 15:44:36 +0500
+app/helpers/pages_helper.rb	Tue, 03 May 2016 14:35:48 +0500
+app/helpers/posts_helper.rb	Tue, 03 May 2016 17:28:57 +0500
+app/helpers/search_helper.rb	Wed, 04 May 2016 12:24:27 +0500
+app/models/articles.rb	Wed, 04 May 2016 15:10:40 +0500
+app/models/post.rb	Wed, 04 May 2016 14:21:38 +0500

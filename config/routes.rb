@@ -1,8 +1,12 @@
 FirstApp::Application.routes.draw do
-  namespace :admin do
-    resources :posts
+  resources :articles do
+    resources :comments
   end
+
+
+  resources :posts
   get 'about', to: 'pages#about', as: 'about'
+  get 'search', to: 'search#search', as: 'search'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
