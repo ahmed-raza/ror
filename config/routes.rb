@@ -3,9 +3,19 @@ FirstApp::Application.routes.draw do
     resources :comments
   end
 
+  get "test/new", to: "test#new"
+  post "test/new", to: "test#new"
 
   resources :posts
-  get 'about', to: 'pages#about', as: 'about'
+
+  get ":id", to: "posts#show"
+
+resources :photos do
+  get 'preview', on: :collection
+end
+
+
+  match '/about' => 'pages#about', as: 'about'
   get 'search', to: 'search#search', as: 'search'
   # The priority is based upon order of creation:
   # first created -> highest priority.

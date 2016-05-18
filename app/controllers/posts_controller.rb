@@ -1,6 +1,12 @@
 class PostsController < ApplicationController
   def index
     @posts = Post.all
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @posts }
+      format.xml { render xml: @posts }
+    end
   end
 
   def show
@@ -12,10 +18,12 @@ class PostsController < ApplicationController
   end
 
   def create
+    params[:post]
     @post = Post.new(params[:post])
     if @post.save
       redirect_to posts_path, :notice => "Your post was saved!"
     else
+      flash.now[:error] = "Could not save Post"
       render "new"
     end
   end
