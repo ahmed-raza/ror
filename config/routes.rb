@@ -2,17 +2,16 @@ FirstApp::Application.routes.draw do
   resources :articles do
     resources :comments
   end
-
-  get "test/new", to: "test#new"
-  post "test/new", to: "test#new"
+  get "test", to: "test#test"
+  get '/test/:id' => 'test#show', constraints: { id: /[A-Z]\d{5}/ }
 
   resources :posts
 
   get ":id", to: "posts#show"
 
-resources :photos do
-  get 'preview', on: :collection
-end
+  resources :photos do
+    get 'preview', on: :collection
+  end
 
 
   match '/about' => 'pages#about', as: 'about'
