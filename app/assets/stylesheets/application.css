@@ -11,3 +11,20 @@
  *= require_self
  *= require_tree .
  */
+.menu {
+  background-color: #987098;
+  padding: 10px;
+  border-radius: 5px;
+}
+.menu li {
+  display: inline;
+}
+.menu li.active a {
+  background-color: black;
+}
+.menu a {
+  text-decoration: none;
+  color: white !important;
+  padding: 10px;
+  outline: none;
+}
