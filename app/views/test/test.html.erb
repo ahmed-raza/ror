@@ -1,0 +1,23 @@
+<em><%= @data %></em>
+<%= form_tag("/test", method: "post") do %>
+  <p>
+    <%= label_tag("data_name", "Name") %>
+    <%= text_field_tag("data[name]") %>
+  </p>
+  <p>
+    <%= label_tag("data_age", "Age") %>
+    <%= text_field_tag("data[age]") %>
+  </p>
+  <fieldset>
+    <legend>Address:</legend>
+    <p>
+      <%= label_tag("data_address_city", "City") %>
+      <%= text_field_tag("data[address][city]") %>
+    </p>
+    <p>
+      <%= label_tag("data_address_country", "Country") %>
+      <%= text_field_tag("data[address][country]") %>
+    </p>
+  </fieldset>
+  <%= submit_tag("Store") %>
+<% end %>
