@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+
+  skip_before_filter :test, only: [:show]
   # GET /articles
   # GET /articles.json
   def index
@@ -80,4 +82,17 @@ class ArticlesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
+  # USERS = { "lifo" => "world" }
+
+  # before_filter :authenticate
+
+  # private
+
+  # def authenticate
+  #   authenticate_or_request_with_http_digest do |username|
+  #     USERS[username]
+  #   end
+  # end
 end

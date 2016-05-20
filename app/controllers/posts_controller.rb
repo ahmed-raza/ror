@@ -1,4 +1,9 @@
 class PostsController < ApplicationController
+  # http_basic_authenticate_with :name => "ahmed", :password => "raza", except: :index
+
+  after_filter :require_login, only: :index
+  # before_filter :require_login, only: :create
+
   def index
     @posts = Post.all
 
@@ -47,4 +52,15 @@ class PostsController < ApplicationController
     @post.destroy
     redirect_to posts_path, :notice => "Your post has been deleted!"
   end
+
+  private
+
+  def require_login
+    p "I am after filter"
+  end
+
+  def logged_in?
+    return false
+  end
+
 end
