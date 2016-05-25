@@ -1,4 +1,6 @@
 FirstApp::Application.routes.draw do
+  devise_for :models
+
   resources :articles do
     resources :comments
   end
