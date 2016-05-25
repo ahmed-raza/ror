@@ -3,6 +3,7 @@ class PostsController < ApplicationController
 
   after_filter :require_login, only: :index
   # before_filter :require_login, only: :create
+  before_filter :authenticate_user!, only: [:new]
 
   def index
     @posts = Post.all

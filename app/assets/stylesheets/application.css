@@ -28,3 +28,6 @@
   padding: 10px;
   outline: none;
 }
+.pull-right {
+  float: right;
+}
