@@ -13,9 +13,9 @@ class AssembliesController < ApplicationController
   end
 
   def create
-    @assembly = Assembly.new(params[:name])
-    @parts = Part.find(params[:assembly][:parts])
-    @assembly.parts << @parts
+    @assembly = Assembly.new(params[:assembly])
+    # @parts = Part.find(params[:assembly][:parts])
+    # @assembly.parts << @parts
 
     if @assembly.save
       redirect_to assemblies_path, :notice => "Assembly created successfully."

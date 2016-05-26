@@ -6,7 +6,7 @@
 </p>
 <p>
   <%= f.label :parts %>
-  <%= f.collection_select :parts, Part.all, :id, :part_number, {}, :multiple => true %>
+  <%= f.collection_select :part_ids, Part.all, :id, :part_number, {}, :multiple => true %>
 </p>
 <p>
   <%= f.submit("Save") %>
