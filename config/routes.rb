@@ -1,6 +1,16 @@
 FirstApp::Application.routes.draw do
+  get "parts/index"
+
+  get "parts/show"
+
+  get "parts/new"
+
+  get "parts/create"
+
   resources :employees, only: [:show, :index]
   resources :books, only: [:show, :index]
+  resources :assemblies, only: [:index, :show, :new, :create]
+  resources :parts, only: [:index, :show, :new]
 
   devise_for :users
 

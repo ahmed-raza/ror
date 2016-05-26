@@ -1,0 +1,8 @@
+<h1>Assemblies#show</h1>
+<p><%= @assembly.name %></p>
+<% if @assembly.parts.exists? %>
+  <% @assembly.parts.each do |part| %>
+    <p>=> <%= link_to part.part_number, part %></p>
+  <% end %>
+<% end %>
+<%= link_to "Back", assemblies_path %>

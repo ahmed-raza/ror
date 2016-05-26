@@ -1,0 +1,6 @@
+<h1>Assemblies#index</h1>
+<p><%= link_to "New", new_assembly_path %></p>
+
+<% @assemblies.each do |assembly| %>
+  <h2><%= link_to assembly.name, assembly %></h2>
+<% end %>

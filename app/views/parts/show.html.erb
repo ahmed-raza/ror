@@ -1,0 +1,10 @@
+<h1>Parts#show</h1>
+<%= @part.part_number %>
+<p>Currently in use for following assemblies.</p>
+<% if @part.assemblies.exists? %>
+<ul>
+  <% @part.assemblies.each do |assembly| %>
+    <li><%= link_to assembly.name, assembly %></li>
+  <% end %>
+</ul>
+<% end %>

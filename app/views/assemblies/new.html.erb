@@ -1,0 +1,14 @@
+<h1>Assemblies#new</h1>
+<%= form_for(@assembly) do |f| %>
+<p>
+  <%= f.label :name  %>
+  <%= f.text_field :name %>
+</p>
+<p>
+  <%= f.label :parts %>
+  <%= f.collection_select :parts, Part.all, :id, :part_number, {}, :multiple => true %>
+</p>
+<p>
+  <%= f.submit("Save") %>
+</p>
+<% end %>

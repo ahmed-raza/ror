@@ -3,6 +3,7 @@
   <li class="<%= active_class(articles_path) %>"><%= link_to "Articles", articles_path %></li>
   <li class="<%= active_class(posts_path) %>"><%= link_to "Posts", posts_path %></li>
   <li class="<%= active_class(employees_path) %>"><%= link_to "Employees", employees_path %></li>
+  <li class="<%= active_class(assemblies_path) %>"><%= link_to "Assemblies", assemblies_path %></li>
   <% if user_signed_in? %>
   <li class="pull-right"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
   <% else %>
