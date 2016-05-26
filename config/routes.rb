@@ -1,4 +1,6 @@
 FirstApp::Application.routes.draw do
+  resources :employees, only: [:show, :index]
+
   devise_for :users
 
   devise_for :models

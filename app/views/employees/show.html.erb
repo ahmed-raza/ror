@@ -1,0 +1,10 @@
+<h1>Employees#show</h1>
+
+<h2><%= @employee.name %></h2>
+
+<p>My offices</p>
+<ul>
+  <% @employee.offices.each do |office| %>
+  <li><%= office.location %></li>
+  <% end %>
+</ul>
