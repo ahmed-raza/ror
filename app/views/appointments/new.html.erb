@@ -1,0 +1,19 @@
+<h1>Appointments#new</h1>
+<p>Find me in app/views/appointments/new.html.erb</p>
+<%= form_for(@appointment) do |f| %>
+<p>
+  <%= f.label :patient %>
+  <%= f.collection_select :patient_id, @patients, :id, :name %>
+</p>
+<p>
+  <%= f.label :doctor %>
+  <%= f.collection_select :doctor_id, @doctors, :id, :name %>
+</p>
+<p>
+  <%= f.label :date %>
+  <%= f.text_field :appointment_date %>
+</p>
+<p>
+  <%= f.submit("Save") %>
+</p>
+<% end %>

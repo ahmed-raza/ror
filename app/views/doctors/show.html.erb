@@ -1,0 +1,21 @@
+<h1>Doctors#show</h1>
+<p>Find me in app/views/doctors/show.html.erb</p>
+<h2><%= @doctor.name %></h2>
+
+<% if @doctor.appointments.exists? %>
+  <p>Appointment with following patients;</p>
+  <table border="1">
+    <tr>
+      <th>#id</th>
+      <th>Patient Name</th>
+    </tr>
+    <% @doctor.appointments.each do |appointment| %>
+    <tr>
+      <td><%= appointment.patient.id %></td>
+      <td><%= appointment.patient.name %></td>
+    </tr>
+    <% end %>
+  </table>
+<% else %>
+<p>This doctor has no appointments for now.</p>
+<% end %>
