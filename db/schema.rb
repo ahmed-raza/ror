@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20160527050429) do
+ActiveRecord::Schema.define(:version => 20160608062456) do
 
   create_table "appointments", :force => true do |t|
     t.integer  "doctor_id"
@@ -48,12 +48,24 @@ ActiveRecord::Schema.define(:version => 20160527050429) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "bikes", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "books", :force => true do |t|
     t.integer  "auther_id"
     t.string   "title"
     t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "cars", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "comments", :force => true do |t|
@@ -135,10 +147,11 @@ ActiveRecord::Schema.define(:version => 20160527050429) do
   end
 
   create_table "tags", :force => true do |t|
-    t.integer  "article_id"
-    t.string   "tag_name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "name"
+    t.string   "taggable_type"
+    t.integer  "taggable_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "users", :force => true do |t|
