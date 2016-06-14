@@ -1,6 +1,10 @@
 FirstApp::Application.routes.draw do
 
-  resources :employees, only: [:show, :index]
+  resources :employees, only: [:show, :index] do
+    collection do
+      get 'search', to: 'employees#search'
+    end
+  end
   resources :books, only: [:show, :index]
   resources :assemblies, only: [:index, :show, :new, :create]
   resources :parts, only: [:index, :show, :new]
