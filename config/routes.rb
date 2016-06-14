@@ -3,6 +3,7 @@ FirstApp::Application.routes.draw do
   resources :employees, only: [:show, :index] do
     collection do
       get 'offices', to: 'employees#offices'
+
     end
   end
   resources :books, only: [:show, :index]
