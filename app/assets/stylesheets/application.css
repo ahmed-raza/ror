@@ -31,3 +31,12 @@
 .pull-right {
   float: right;
 }
+.child-menu {
+  background: #987098;
+  display: none;
+  padding: 10px;
+  margin: 0;
+  position: absolute;
+  left: 4.5%;
+  top: 5.3%;
+}
