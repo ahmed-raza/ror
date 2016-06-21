@@ -11,32 +11,3 @@
  *= require_self
  *= require_tree .
  */
-.menu {
-  background-color: #987098;
-  padding: 10px;
-  border-radius: 5px;
-}
-.menu li {
-  display: inline;
-}
-.menu li.active a {
-  background-color: black;
-}
-.menu a {
-  text-decoration: none;
-  color: white !important;
-  padding: 10px;
-  outline: none;
-}
-.pull-right {
-  float: right;
-}
-.child-menu {
-  background: #987098;
-  display: none;
-  padding: 10px;
-  margin: 0;
-  position: absolute;
-  left: 4.5%;
-  top: 5.3%;
-}

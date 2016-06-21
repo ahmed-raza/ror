@@ -1,19 +1,21 @@
-<ul class="menu">
-  <li class="<%= active_class(root_path) %>"><%= link_to "Home", root_path %></li>
-  <li class="parent">
-    <a href="#">One to many</a>
-    <ul class="child-menu">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="<%= active_class(root_path) %>"><%= link_to "Home", root_path %></li>
       <li class="<%= active_class(articles_path) %>"><%= link_to "Articles", articles_path %></li>
+      <li class="<%= active_class(posts_path) %>"><%= link_to "Posts", posts_path %></li>
+      <li class="<%= active_class(employees_path) %>"><%= link_to "Employees", employees_path %></li>
+      <li class="<%= active_class(assemblies_path) %>"><%= link_to "Assemblies", assemblies_path %></li>
+      <li class="<%= active_class(doctors_path) %>"><%= link_to "Doctors", doctors_path %></li>
+      <li class="<%= active_class(patients_path) %>"><%= link_to "Patients", patients_path %></li>
+      <% if user_signed_in? %>
+      <li class="pull-right"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+      <li class="<%= active_class(new_user_session_path) %> pull-right"><%= link_to "Sign In", new_user_session_path %></li>
+      <% end %>
     </ul>
-  </li>
-  <li class="<%= active_class(posts_path) %>"><%= link_to "Posts", posts_path %></li>
-  <li class="<%= active_class(employees_path) %>"><%= link_to "Employees", employees_path %></li>
-  <li class="<%= active_class(assemblies_path) %>"><%= link_to "Assemblies", assemblies_path %></li>
-  <li class="<%= active_class(doctors_path) %>"><%= link_to "Doctors", doctors_path %></li>
-  <li class="<%= active_class(patients_path) %>"><%= link_to "Patients", patients_path %></li>
-  <% if user_signed_in? %>
-  <li class="pull-right"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
-  <% else %>
-  <li class="<%= active_class(new_user_session_path) %> pull-right"><%= link_to "Sign In", new_user_session_path %></li>
-  <% end %>
-</ul>
+  </div>
+</nav>
