@@ -13,8 +13,8 @@
     </div>
   <% end %>
   <p><%= f.label :title %></p>
-  <p><%= f.text_field :title %></p>
+  <p><%= f.text_field :title, class: "form-control" %></p>
   <p><%= f.label :content %></p>
-  <p><%= f.text_area :content %></p>
-  <p><%= f.submit "Add a new post" %></p>
+  <p><%= f.text_area :content, class: "form-control" %></p>
+  <p><%= f.submit "Add a new post", class: "btn btn-success" %></p>
 <% end %>
