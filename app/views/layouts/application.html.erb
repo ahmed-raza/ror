@@ -8,12 +8,8 @@
 </head>
 <body>
 <%= render :partial => 'partials/header_menu' %>
-<ul>
-<% flash.each do |key, value| %>
-  <li> <%= value %> </li>
-<% end %>
-</ul>
 <div class="container">
+<%= render :partial => 'partials/messages' %>
   <%= yield %>
 </div>
 

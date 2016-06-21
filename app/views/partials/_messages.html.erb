@@ -1,0 +1,22 @@
+<% if flash[:notice] %>
+  <div class="alert alert-success">
+    <a class="close" href="#" data-dismiss="alert">x</a>
+    <h4 class="alert-heading">Success!</h4>
+    <ul>
+    <% flash.each do |key, value| %>
+      <li> <%= value %> </li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+<% if flash[:error] %>
+  <div class="alert alert-danger">
+    <a class="close" href="#" data-dismiss="alert">x</a>
+    <h4 class="alert-heading">Uh oh!</h4>
+    <ul>
+    <% flash.each do |key, value| %>
+      <li> <%= value %> </li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
