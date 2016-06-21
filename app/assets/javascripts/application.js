@@ -13,3 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+$(document).ready(function(){
+  $('.parent').hover(function(){
+    $(this).find('.child-menu').stop(true,true).slideToggle(100);
+  });
+});
