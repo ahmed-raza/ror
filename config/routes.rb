@@ -34,6 +34,7 @@ FirstApp::Application.routes.draw do
 
   match '/about' => 'pages#about', as: 'about'
   get 'search', to: 'search#search', as: 'search'
+  get :abc, to: 'test#test'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
